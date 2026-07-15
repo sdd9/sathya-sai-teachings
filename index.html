@@ -10,10 +10,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Elegant fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Georgia:wght@400;500&amp;family=Inter:wght@400;500;600&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Georgia:wght@400;500&family=Inter:wght@400;500;600&display=swap">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Georgia:wght@400;500&amp;family=Inter:wght@400;500;600&amp;display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Georgia:wght@400;500&family=Inter:wght@400;500;600&display=swap');
         
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
@@ -96,13 +96,13 @@
 </head>
 <body class="bg-white text-[#1E2937] dark:bg-[#0F172A] dark:text-[#E2E8F0]">
     
-    <!-- Top Quote Banner - Sathya Sai inspired -->
-    <div class="quote-banner text-white py-3.5">
+    <!-- Top Quote Banner - Sathya Sai inspired (LARGER QUOTE) -->
+    <div class="quote-banner text-white py-4">
         <div class="max-w-screen-2xl mx-auto px-6 text-center">
-            <p class="text-sm md:text-[15px] font-medium tracking-wide">
-                “HEAR, ACT &amp; PRACTICE. Practice what is heard. Then only it becomes a real study circle.”
+            <p class="text-xl md:text-2xl font-semibold tracking-wide">
+                “HEAR, ACT & PRACTICE. Practice what is heard. Then only it becomes a real study circle.”
             </p>
-            <p class="text-[10px] text-white/70 mt-0.5 tracking-wider">— Sri Sathya Sai Baba</p>
+            <p class="text-sm md:text-base text-white/80 mt-1 tracking-wider">— Sri Sathya Sai Baba</p>
         </div>
     </div>
 
@@ -197,7 +197,7 @@
                     <div class="relative group max-w-[380px] mx-auto md:mx-0">
                         <!-- Real book cover is in place -->
                         <img id="book-cover" 
-                             src="cover.jpg" 
+                             src="Cover.jpg" 
                              alt="Sathya Sai Parenting by Rita Bruce - Official Book Cover"
                              class="w-full rounded-3xl book-shadow border border-[#C2410F]/10 dark:border-white/10">
                         
@@ -269,7 +269,7 @@
                 <div class="md:col-span-7 mt-8 md:mt-0 text-[15px] leading-relaxed text-[#C2410F]/90 dark:text-amber-200/90">
                     Rita and Robert Bruce have been devotees of Sri Sathya Sai Baba and active members in the Sai Organization for over 45 years. 
                     They have been married over 60 years and raised 4 children. Rita is the author of five books personally named by Sathya Sai Baba: 
-                    <em>Vision of Sai I &amp; II</em>, <em>Sathya Sai Parenting I &amp; II</em>, and <em>Love of Conscience</em>. 
+                    <em>Vision of Sai I & II</em>, <em>Sathya Sai Parenting I & II</em>, and <em>Love of Conscience</em>. 
                     Together they have traveled the world sharing these teachings through seminars and public talks.
                 </div>
             </div>
@@ -317,7 +317,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="border-t border-[#C2410F]/10 dark:border-white/10 bg-[#f8f1e3] dark:bg-[#111827]">
+    <footer class="border-t border-[#C2410F]/10 dark:border-white/10 bg-white dark:bg-[#0F172A]">
         <div class="max-w-screen-2xl mx-auto px-6 py-10">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-6 text-sm">
                 <div class="text-[#C2410F]/70 dark:text-amber-400/70">
@@ -336,7 +336,7 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-black/70 z-50" onclick="toggleMobileMenu()">
-        <div class="bg-[#f8f1e3] dark:bg-[#111827] w-72 h-full p-8" onclick="event.stopImmediatePropagation()">
+        <div class="bg-white dark:bg-[#0F172A] w-72 h-full p-8" onclick="event.stopImmediatePropagation()">
             <div class="flex justify-between items-center mb-10">
                 <div>
                     <div class="font-semibold text-xl text-[#C2410F] dark:text-amber-300">Practical Applications</div>
@@ -493,7 +493,7 @@
             initializeKeyboard();
             initializeCoverZoom();
             
-            console.log('%c[Sathya Sai Book Series] Website created successfully on GitHub!', 'color:#C2410F');
+            console.log('%c[Sathya Sai Book Series] Website updated on GitHub!', 'color:#C2410F');
         }
 
         window.onload = initializeWebsite;
