@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practical Applications of Sathya Sai's Teachings — A series of books and materials to help humanity live His teachings through daily practice, starting with Sathya Sai Parenting by Rita Bruce.">
+    <title>Practical Applications of Sathya Sai's Teachings • Sathya Sai Parenting</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Elegant fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Georgia:wght@400;500&amp;family=Inter:wght@400;500;600&amp;display=swap">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Georgia:wght@400;500&amp;family=Inter:wght@400;500;600&amp;display=swap');
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+        
+        .nav-font {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .book-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.05;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+        }
+        
+        .prose {
+            max-width: 68ch;
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: #374151;
+        }
+        
+        .dark .prose {
+            color: #e5e7eb;
+        }
+        
+        /* === UPDATED SATHYA SAI INSPIRED COLOR THEME === */
+        :root {
+            --saffron: #C2410F;        /* Warm saffron orange - main accent */
+            --saffron-dark: #7C2D12;   /* Deeper burnt orange */
+            --gold: #D97706;           /* Gold accent */
+            --cream: #f8f1e3;          /* Warm paper background */
+        }
+        
+        .sai-accent {
+            color: #C2410F;
+        }
+        
+        .dark .sai-accent {
+            color: #F59E0B;
+        }
+        
+        .quote-banner {
+            background: linear-gradient(to right, #C2410F, #9F3410);
+        }
+        
+        .dark .quote-banner {
+            background: linear-gradient(to right, #7C2D12, #451A03);
+        }
+        
+        .nav-active {
+            color: #C2410F;
+            font-weight: 600;
+        }
+        
+        .dark .nav-active {
+            color: #F59E0B;
+        }
+        
+        .book-shadow {
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25), 
+                       0 10px 10px -6px rgb(0 0 0 / 0.15);
+        }
+        
+        .book-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                       box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .book-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-[#1E2937] dark:bg-[#0F172A] dark:text-[#E2E8F0]">
+    
+    <!-- Top Quote Banner - Sathya Sai inspired -->
+    <div class="quote-banner text-white py-3.5">
+        <div class="max-w-screen-2xl mx-auto px-6 text-center">
+            <p class="text-sm md:text-[15px] font-medium tracking-wide">
+                “HEAR, ACT &amp; PRACTICE. Practice what is heard. Then only it becomes a real study circle.”
+            </p>
+            <p class="text-[10px] text-white/70 mt-0.5 tracking-wider">— Sri Sathya Sai Baba</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 bg-white/95 dark:bg-[#0F172A]/95 backdrop-blur-lg border-b border-gray-200 dark:border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="flex items-center justify-between py-5">
+                <!-- Logo / Series Title -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-[#C2410F] dark:bg-amber-600 rounded-2xl flex items-center justify-center shadow-inner">
+                        <span class="text-white text-2xl font-bold tracking-tighter">ॐ</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-xl tracking-tight text-[#C2410F] dark:text-amber-300">Practical Applications</div>
+                        <div class="text-xs text-[#C2410F]/70 dark:text-amber-400/70 -mt-1">of Sathya Sai's Teachings</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium nav-font">
+                    <a href="#series" class="hover:text-[#C2410F] dark:hover:text-amber-400 transition-colors">The Series</a>
+                    <a href="#book1" class="hover:text-[#C2410F] dark:hover:text-amber-400 transition-colors">Book 1</a>
+                    <a href="#upcoming" class="hover:text-[#C2410F] dark:hover:text-amber-400 transition-colors">Upcoming</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                            class="w-10 h-10 flex items-center justify-center rounded-2xl hover:bg-amber-900/10 dark:hover:bg-white/10 transition-colors text-[#C2410F] dark:text-amber-300"
+                            aria-label="Toggle dark mode">
+                        <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden w-10 h-10 flex items-center justify-center rounded-2xl hover:bg-amber-900/10" onclick="toggleMobileMenu()">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Series Introduction -->
+    <div id="series" class="max-w-screen-2xl mx-auto px-6 pt-12 pb-16">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-x-2 px-5 py-1.5 bg-[#C2410F]/10 dark:bg-amber-900/30 text-[#C2410F] dark:text-amber-300 rounded-3xl text-xs font-semibold tracking-[2px] mb-6">
+                A SERIES OF PRACTICAL GUIDANCE
+            </div>
+            
+            <h1 class="book-title text-6xl md:text-7xl leading-none tracking-tighter text-[#C2410F] dark:text-amber-100 mb-6">
+                Practical Applications<br>of Sathya Sai's Teachings
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-xl text-[#C2410F]/90 dark:text-amber-200/90 leading-relaxed">
+                A growing collection of books and materials dedicated to helping humanity 
+                <span class="font-medium">live</span> Sri Sathya Sai Baba’s teachings through daily practice — 
+                transforming wisdom into lived experience.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mt-10">
+                <a href="#book1" 
+                   class="px-8 py-4 bg-[#C2410F] hover:bg-[#9F3410] transition-all text-white font-semibold rounded-3xl text-lg shadow flex items-center gap-x-3">
+                    Explore Book 1
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+                <a href="#upcoming" 
+                   class="px-8 py-4 border border-[#C2410F]/30 dark:border-white/30 hover:bg-white dark:hover:bg-white/5 transition-all font-medium rounded-3xl text-lg">
+                    See Upcoming Books
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Book 1 -->
+    <div id="book1" class="max-w-screen-2xl mx-auto px-6 pb-20">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-x-3 mb-8">
+                <div class="px-4 py-1 bg-[#C2410F] text-white text-xs font-bold tracking-widest rounded-full">FEATURED BOOK</div>
+                <div class="h-px flex-1 bg-gradient-to-r from-[#C2410F]/20 to-transparent"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-12 gap-x-12 gap-y-10 items-start">
+                
+                <!-- Book Cover -->
+                <div class="md:col-span-5 lg:col-span-4">
+                    <div class="relative group max-w-[380px] mx-auto md:mx-0">
+                        <!-- Real book cover is in place -->
+                        <img id="book-cover" 
+                             src="cover.jpg" 
+                             alt="Sathya Sai Parenting by Rita Bruce - Official Book Cover"
+                             class="w-full rounded-3xl book-shadow border border-[#C2410F]/10 dark:border-white/10">
+                        
+                        <div class="absolute -bottom-4 -right-4 bg-white dark:bg-[#1f2937] px-5 py-2 rounded-2xl shadow text-sm font-medium border border-[#C2410F]/10 flex items-center gap-x-2">
+                            <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></div>
+                            <span class="text-emerald-700 dark:text-emerald-400 font-semibold text-xs tracking-wide">NOW AVAILABLE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Book Details -->
+                <div class="md:col-span-7 lg:col-span-8">
+                    <div>
+                        <div class="uppercase tracking-[2px] text-xs font-semibold text-[#C2410F]/70 dark:text-amber-400">BOOK 1 IN THE SERIES</div>
+                        <h2 class="book-title text-5xl md:text-6xl tracking-tighter text-[#C2410F] dark:text-white mt-2 mb-4">
+                            Sathya Sai Parenting<br>Part 1
+                        </h2>
+                        <p class="text-2xl text-[#C2410F]/90 dark:text-amber-200">by <span class="font-medium">Rita Bruce</span></p>
+                    </div>
+                    
+                    <!-- Blurb -->
+                    <div class="prose mt-8">
+                        <p>These teachings are for students, young adults, married couples, parents, and grandparents. They focus on the <strong>Restoration of the Family Home</strong> — repairing the sacred structure of family life that has been worn by the strong winds of changing values.</p>
+                        
+                        <p class="mt-4">This book serves as a practical instruction manual to create the right environment for children to grow with character, compassion, and spiritual values rooted in Sathya Sai Baba’s teachings.</p>
+                    </div>
+                    
+                    <!-- Key Message -->
+                    <div class="mt-6 p-5 bg-white dark:bg-[#1f2937] border border-[#C2410F]/10 rounded-3xl">
+                        <div class="text-xs uppercase tracking-widest text-[#C2410F]/60 dark:text-amber-400 mb-1">CORE PURPOSE</div>
+                        <p class="font-medium text-lg">"This book is an instruction manual to create the right environment for children."</p>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                        <!-- Download PDF Button -->
+                        <a href="https://drive.google.com/file/d/1zUC66HB50TSSj7BtOYbWKAE1uMEdTeaJ/view?usp=drive_link" 
+                           target="_blank"
+                           class="flex-1 sm:flex-none px-9 py-4 bg-[#C2410F] hover:bg-[#9F3410] active:bg-black transition-all text-white font-semibold text-lg rounded-3xl shadow-lg flex items-center justify-center gap-x-3 group">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M17 13v6m-3-3H7m5 3v-6m-3 3h6m-6-3H4"></path>
+                            </svg>
+                            <span>Download PDF (Part 1)</span>
+                        </a>
+                        
+                        <!-- Read Web Version -->
+                        <button onclick="showWebVersionModal()"
+                                class="flex-1 sm:flex-none px-9 py-4 border-2 border-[#C2410F] dark:border-amber-400 hover:bg-[#C2410F]/5 dark:hover:bg-amber-900/20 transition-all font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3 text-[#C2410F] dark:text-amber-300">
+                            <span>Read Online (Web Version)</span>
+                            <span class="text-xs px-2.5 py-0.5 bg-[#C2410F]/10 dark:bg-amber-400/20 rounded-full font-mono">COMING SOON</span>
+                        </button>
+                    </div>
+                    
+                    <p class="text-xs text-[#C2410F]/60 dark:text-amber-400/70 mt-3">PDF hosted on Google Drive • Web version of chapters coming soon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Author Section -->
+    <div class="max-w-screen-2xl mx-auto px-6 pb-16 border-t border-[#C2410F]/10 dark:border-white/10">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-x-12 items-center">
+                <div class="md:col-span-5">
+                    <div class="text-sm uppercase tracking-[1.5px] text-[#C2410F]/70 dark:text-amber-400 mb-3">THE AUTHOR</div>
+                    <h3 class="text-4xl font-semibold tracking-tight text-[#C2410F] dark:text-white">Rita Bruce</h3>
+                    <p class="mt-1 text-[#C2410F]/80 dark:text-amber-300">with Robert Bruce</p>
+                </div>
+                <div class="md:col-span-7 mt-8 md:mt-0 text-[15px] leading-relaxed text-[#C2410F]/90 dark:text-amber-200/90">
+                    Rita and Robert Bruce have been devotees of Sri Sathya Sai Baba and active members in the Sai Organization for over 45 years. 
+                    They have been married over 60 years and raised 4 children. Rita is the author of five books personally named by Sathya Sai Baba: 
+                    <em>Vision of Sai I &amp; II</em>, <em>Sathya Sai Parenting I &amp; II</em>, and <em>Love of Conscience</em>. 
+                    Together they have traveled the world sharing these teachings through seminars and public talks.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Books -->
+    <div id="upcoming" class="max-w-screen-2xl mx-auto px-6 pb-20">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-end justify-between mb-8">
+                <div>
+                    <div class="uppercase tracking-[2px] text-xs font-semibold text-[#C2410F]/70 dark:text-amber-400">THE SERIES CONTINUES</div>
+                    <h2 class="section-title text-4xl tracking-tight text-[#C2410F] dark:text-white">Upcoming Books</h2>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Book 1 (Current) -->
+                <div class="book-card p-6 bg-white dark:bg-[#1f2937] border border-[#C2410F]/10 rounded-3xl">
+                    <div class="flex justify-between">
+                        <div>
+                            <div class="text-xs text-emerald-600 dark:text-emerald-400 font-semibold">NOW AVAILABLE</div>
+                            <div class="font-semibold text-2xl mt-1">Sathya Sai Parenting Part 1</div>
+                            <div class="text-sm text-[#C2410F]/70">Rita Bruce</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xs px-3 py-1 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 rounded-full">Part 1</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Upcoming Part 2 -->
+                <div class="book-card p-6 bg-white/70 dark:bg-[#1f2937]/70 border border-dashed border-[#C2410F]/30 dark:border-white/20 rounded-3xl flex flex-col">
+                    <div class="flex-1">
+                        <div class="text-xs text-amber-600/70 dark:text-amber-400/70 font-semibold">IN PREPARATION</div>
+                        <div class="font-semibold text-2xl mt-1 text-[#C2410F]/70 dark:text-amber-300">Sathya Sai Parenting Part 2</div>
+                        <div class="text-sm text-[#C2410F]/60 dark:text-amber-400/70">Rita Bruce • Coming Soon</div>
+                        
+                        <p class="mt-4 text-sm text-[#C2410F]/70 dark:text-amber-300/80">Continuing the practical guidance for raising children with spiritual values and restoring the family home.</p>
+                    </div>
+                    <div class="mt-4 text-xs text-[#C2410F]/50">More books in the series will be added as they are completed.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#C2410F]/10 dark:border-white/10 bg-[#f8f1e3] dark:bg-[#111827]">
+        <div class="max-w-screen-2xl mx-auto px-6 py-10">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-6 text-sm">
+                <div class="text-[#C2410F]/70 dark:text-amber-400/70">
+                    © 2026 • Practical Applications of Sathya Sai's Teachings<br>
+                    Dedicated to the teachings of Sri Sathya Sai Baba
+                </div>
+                
+                <div class="flex flex-wrap gap-x-6 gap-y-2 text-xs text-[#C2410F]/70 dark:text-amber-400/70">
+                    <a href="https://www.sathyasai.org/" target="_blank" class="hover:text-[#C2410F] transition">Official Sathya Sai Organization</a>
+                    <a href="https://loveinhumannature.org/" target="_blank" class="hover:text-[#C2410F] transition">Love in Human Nature</a>
+                    <span>Free to read and share</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-black/70 z-50" onclick="toggleMobileMenu()">
+        <div class="bg-[#f8f1e3] dark:bg-[#111827] w-72 h-full p-8" onclick="event.stopImmediatePropagation()">
+            <div class="flex justify-between items-center mb-10">
+                <div>
+                    <div class="font-semibold text-xl text-[#C2410F] dark:text-amber-300">Practical Applications</div>
+                    <div class="text-xs text-[#C2410F]/70">of Sathya Sai's Teachings</div>
+                </div>
+                <button onclick="toggleMobileMenu()" class="text-3xl leading-none text-[#C2410F]/70">&times;</button>
+            </div>
+            
+            <div class="flex flex-col gap-y-5 text-lg">
+                <a href="#series" onclick="toggleMobileMenu()" class="py-1">The Series</a>
+                <a href="#book1" onclick="toggleMobileMenu()" class="py-1">Book 1: Sathya Sai Parenting</a>
+                <a href="#upcoming" onclick="toggleMobileMenu()" class="py-1">Upcoming Books</a>
+                
+                <div class="pt-6 border-t border-[#C2410F]/20">
+                    <a href="https://drive.google.com/file/d/1zUC66HB50TSSj7BtOYbWKAE1uMEdTeaJ/view?usp=drive_link" 
+                       target="_blank"
+                       class="block w-full py-3.5 bg-[#C2410F] text-white text-center rounded-2xl font-semibold">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Web Version Coming Soon Modal -->
+    <div id="web-modal" class="hidden fixed inset-0 bg-black/70 z-[60] flex items-center justify-center p-6" onclick="hideWebVersionModal()">
+        <div class="bg-white dark:bg-[#1f2937] rounded-3xl max-w-lg w-full p-8 shadow-2xl" onclick="event.stopImmediatePropagation()">
+            <div class="text-center">
+                <div class="mx-auto w-16 h-16 bg-amber-100 dark:bg-amber-900/40 rounded-full flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-[#C2410F] dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                
+                <h3 class="text-2xl font-semibold tracking-tight text-[#C2410F] dark:text-white">Web Version Coming Soon</h3>
+                <p class="mt-4 text-[#C2410F]/80 dark:text-amber-200/90">We are preparing a beautiful online reading experience with chapters from <strong>Sathya Sai Parenting Part 1</strong>.</p>
+                
+                <div class="mt-8 flex flex-col gap-3">
+                    <button onclick="hideWebVersionModal()" 
+                            class="w-full py-4 bg-[#C2410F] text-white font-semibold rounded-3xl">Got it — I'll check back</button>
+                    
+                    <button onclick="hideWebVersionModal(); document.getElementById('book1').scrollIntoView({behavior:'smooth'})" 
+                            class="w-full py-4 text-sm text-[#C2410F]/80 dark:text-amber-300 hover:text-[#C2410F]">Return to Book Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind configuration
+        function initializeTailwind() {
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'serif-custom': ['Georgia', 'Times New Roman', 'serif'],
+                            'display': ['Playfair Display', 'Georgia', 'serif']
+                        }
+                    }
+                }
+            };
+        }
+
+        // Theme Toggle
+        let isDark = false;
+
+        function initializeTheme() {
+            const saved = localStorage.getItem('sai-theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (saved === 'dark' || (!saved && prefersDark)) {
+                document.documentElement.classList.add('dark');
+                isDark = true;
+            }
+            
+            updateThemeIcon();
+            
+            document.getElementById('theme-toggle').addEventListener('click', () => {
+                isDark = !isDark;
+                if (isDark) {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('sai-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('sai-theme', 'light');
+                }
+                updateThemeIcon();
+            });
+        }
+        
+        function updateThemeIcon() {
+            const icon = document.getElementById('theme-icon');
+            if (isDark) {
+                icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>`;
+            } else {
+                icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>`;
+            }
+        }
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        }
+
+        // Web Version Modal
+        function showWebVersionModal() {
+            document.getElementById('web-modal').classList.remove('hidden');
+            document.getElementById('web-modal').classList.add('flex');
+        }
+        
+        function hideWebVersionModal() {
+            const modal = document.getElementById('web-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        // Keyboard support
+        function initializeKeyboard() {
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('web-modal');
+                    if (!modal.classList.contains('hidden')) {
+                        hideWebVersionModal();
+                    }
+                }
+            });
+        }
+
+        // Make cover clickable to enlarge
+        function initializeCoverZoom() {
+            const cover = document.getElementById('book-cover');
+            if (!cover) return;
+            
+            cover.style.cursor = 'zoom-in';
+            cover.addEventListener('click', () => {
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black/90 z-[70] flex items-center justify-center p-6';
+                modal.innerHTML = `
+                    <div class="relative max-w-[90vw] max-h-[90vh]">
+                        <img src="${cover.src}" class="rounded-3xl shadow-2xl max-h-[90vh]" alt="Book cover enlarged">
+                        <button class="absolute -top-4 -right-4 bg-white text-black w-9 h-9 rounded-full flex items-center justify-center text-2xl shadow-lg">&times;</button>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                modal.addEventListener('click', () => modal.remove());
+                modal.querySelector('button').onclick = (e) => { e.stopPropagation(); modal.remove(); };
+            });
+        }
+
+        // Main init
+        function initializeWebsite() {
+            initializeTailwind();
+            initializeTheme();
+            initializeKeyboard();
+            initializeCoverZoom();
+            
+            console.log('%c[Sathya Sai Book Series] Website created successfully on GitHub!', 'color:#C2410F');
+        }
+
+        window.onload = initializeWebsite;
+    </script>
+</body>
+</html>
