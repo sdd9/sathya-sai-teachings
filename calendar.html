@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SSSE Calendar • About SSSE</title>
+<title>SSSE Calendar</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 :root { --bg:#f6efe3; --surface:#fffbf4; --fg:#2a1a12; --muted:#6d5243; --primary:#c45c12; --maroon:#7a2e1a; --border:#e4d4bc; }
@@ -13,8 +13,7 @@ h1,h2 { font-family:"Cormorant Garamond",Georgia,serif; color:var(--maroon) }
 a { color:inherit }
 .wrap { max-width:840px; margin:0 auto; padding:0 1.25rem }
 header { position:sticky; top:0; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--border) }
-.nav { display:flex; justify-content:space-between; align-items:center; padding:.85rem 0; gap:1rem }
-.brand { text-decoration:none; color:var(--maroon); font-family:"Cormorant Garamond",serif; font-size:1.35rem }
+.nav { display:flex; justify-content:flex-end; align-items:center; padding:.85rem 0; gap:1rem }
 nav a { text-decoration:none; font-size:.9rem; font-weight:500; padding:.45rem .8rem; border-radius:999px; color:var(--muted) }
 nav a.on { background:var(--maroon); color:var(--surface) }
 .hero { padding:2.8rem 0 1.5rem }
@@ -25,7 +24,6 @@ h1 { font-size:clamp(2.2rem,5vw,3.4rem); margin:.4rem 0 }
 .btn { display:inline-flex; align-items:center; min-height:44px; padding:0 1.1rem; border-radius:999px; text-decoration:none; font-weight:600; font-size:.9rem }
 .solid { background:var(--maroon); color:var(--surface) }
 .ghost { background:var(--surface); border:1px solid var(--border) }
-.feed { font-size:.85rem; color:var(--muted); word-break:break-all }
 section { margin:2rem 0 }
 h2 { font-size:1.8rem; margin:0 0 .6rem }
 .note { color:var(--primary); font-style:italic; font-size:.92rem }
@@ -38,11 +36,10 @@ footer { background:var(--maroon); color:var(--surface); padding:1.6rem 0; margi
 </head>
 <body>
 <header><div class="wrap nav">
-  <a class="brand" href="about_ssse.html">About SSSE</a>
   <nav>
-    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
     <a href="about_ssse.html">About SSSE</a>
-    <a href="ssse.html">Sessions</a>
+    <a href="ssse.html">SSSE</a>
     <a class="on" href="calendar.html">Calendar</a>
   </nav>
 </div></header>
