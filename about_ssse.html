@@ -9,7 +9,7 @@
     :root { --bg:#f6efe3; --surface:#fffbf4; --fg:#2a1a12; --muted:#6d5243; --primary:#c45c12; --maroon:#7a2e1a; --gold:#c9a227; --border:#e4d4bc; }
     * { box-sizing: border-box; }
     body { margin:0; font-family: Figtree, system-ui, sans-serif; background:var(--bg); color:var(--fg); line-height:1.6; }
-    h1,h2 { font-family: "Cormorant Garamond", Georgia, serif; }
+    h1,h2,h3 { font-family: "Cormorant Garamond", Georgia, serif; }
     a { color: inherit; }
     .wrap { max-width:1080px; margin:0 auto; padding:0 1.25rem; }
     header { position:sticky; top:0; z-index:20; background:color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
@@ -23,6 +23,8 @@
     blockquote p { font-family:"Cormorant Garamond", serif; font-size:1.35rem; font-style:italic; margin:0; }
     blockquote footer { color:var(--muted); font-size:.9rem; margin-top:.4rem; }
     section { padding:3rem 0; }
+    .portrait { margin:0 auto; max-width:22rem; background:var(--surface); border:1px solid var(--border); border-radius:1.4rem; overflow:hidden; }
+    .portrait img { display:block; width:100%; height:auto; }
   </style>
 </head>
 <body>
@@ -31,7 +33,8 @@
       <a class="brand" href="about_ssse.html">About SSSE</a>
       <nav>
         <a href="index.html">Home</a>
-        <a href="ssse.html">SSSE</a>
+        <a href="ssse.html">Sessions</a>
+        <a href="#guru-mission">Guru’s mission</a>
         <a href="calendar.html">Calendar</a>
       </nav>
     </div>
@@ -40,7 +43,10 @@
     <section>
       <p class="kicker">Sri Sathya Sai Spiritual Education</p>
       <h1>Bal Vikas — the blossoming of human excellence</h1>
-      <p class="lead">A free weekly programme for children. Outside India it is called Sai Spiritual Education (SSE / SSSE).</p>
+      <p class="lead">A free weekly programme for children. Outside India it is called Sai Spiritual Education (SSE / SSSE). At home it remains Bal Vikas.</p>
+      <figure class="portrait" style="margin-top:1.5rem">
+        <img src="https://sdd9.github.io/SSSE/swami-child.png" alt="Sri Sathya Sai Baba blessing a kneeling child" />
+      </figure>
     </section>
     <section id="guru-mission">
       <p class="kicker">The guru's mission</p>
