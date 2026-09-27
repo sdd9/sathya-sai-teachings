@@ -1,163 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About SSSE — Sri Sathya Sai Spiritual Education | Bal Vikas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root { --bg:#f6efe3; --surface:#fffbf4; --fg:#2a1a12; --muted:#6d5243; --primary:#c45c12; --maroon:#7a2e1a; --gold:#c9a227; --border:#e4d4bc; }
-    * { box-sizing:border-box } html { scroll-behavior:smooth }
-    body { margin:0; font-family:Figtree,system-ui,sans-serif; background:var(--bg); color:var(--fg); line-height:1.6 }
-    h1,h2,h3 { font-family:"Cormorant Garamond",Georgia,serif; line-height:1.15 }
-    a { color:inherit }
-    .wrap { max-width:1080px; margin:0 auto; padding:0 1.25rem }
-    header { position:sticky; top:0; z-index:20; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(12px); border-bottom:1px solid var(--border) }
-    .nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.85rem 0 }
-    .brand { text-decoration:none; color:var(--maroon); font-family:"Cormorant Garamond",serif; font-size:1.4rem }
-    nav { display:flex; flex-wrap:wrap; gap:.2rem }
-    nav a { text-decoration:none; font-size:.9rem; font-weight:500; padding:.45rem .85rem; border-radius:999px; color:var(--muted) }
-    .hero { padding:3.5rem 0 2.5rem }
-    .hero-grid { display:grid; gap:2rem; align-items:center }
-    @media (min-width:900px){ .hero-grid { grid-template-columns:1.15fr .85fr } }
-    .portrait { margin:0 auto; max-width:22rem; background:var(--surface); border:1px solid var(--border); border-radius:1.4rem; overflow:hidden }
-    .portrait img { display:block; width:100%; height:auto }
-    .portrait figcaption { padding:.85rem 1rem 1rem; text-align:center; color:var(--muted); font-size:.9rem }
-    .kicker { font-size:.72rem; font-weight:700; letter-spacing:.28em; text-transform:uppercase; color:var(--primary) }
-    h1 { font-size:clamp(2.4rem,6vw,4.2rem); color:var(--maroon); margin:.6rem 0 0; max-width:16ch }
-    h1 em { display:block; font-style:italic; color:var(--primary) }
-    .lead { max-width:40rem; font-size:1.12rem; color:var(--muted) }
-    blockquote { border-left:2px solid var(--gold); margin:1.75rem 0 0; padding-left:1.1rem }
-    blockquote p { font-family:"Cormorant Garamond",serif; font-size:1.45rem; font-style:italic; margin:0 }
-    blockquote footer { color:var(--muted); font-size:.9rem; margin-top:.4rem }
-    .btns { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:2rem }
-    .btn { display:inline-flex; align-items:center; min-height:44px; padding:0 1.2rem; border-radius:999px; text-decoration:none; font-weight:600; font-size:.92rem }
-    .btn-solid { background:var(--maroon); color:var(--surface) }
-    .btn-ghost { background:var(--surface); border:1px solid var(--border) }
-    .tri { display:grid; border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:var(--border) }
-    @media (min-width:720px){ .tri { grid-template-columns:repeat(3,1fr) } }
-    .tri article { background:var(--surface); padding:2rem 1.4rem }
-    .tri h2 { margin:.4rem 0; color:var(--maroon); font-size:1.6rem }
-    .tri p { color:var(--muted); margin:0 }
-    section { padding:3.2rem 0 }
-    .grid5 { display:grid; gap:1rem }
-    @media (min-width:900px){ .grid5 { grid-template-columns:repeat(5,1fr) } }
-    .card { background:var(--surface); border:1px solid var(--border); border-radius:1.1rem; padding:1.2rem; text-decoration:none }
-    .card h3 { margin:0; font-size:1.55rem; color:var(--maroon) }
-    .card .en { color:var(--primary); font-size:.9rem; font-weight:600 }
-    .maroon { background:var(--maroon); color:var(--surface) }
-    .maroon .kicker { color:var(--gold) }
-    .meth { display:grid; gap:1.2rem }
-    @media (min-width:800px){ .meth { grid-template-columns:repeat(5,1fr) } }
-    .groups { display:grid; gap:1rem }
-    @media (min-width:720px){ .groups { grid-template-columns:1fr 1fr } }
-    .gcard { border:1px solid var(--border); background:var(--surface); border-radius:1.1rem; padding:1.3rem }
-    .ages { color:var(--primary); font-size:.9rem; font-weight:600 }
-    .value { background:var(--surface); border:1px solid var(--border); border-radius:1.4rem; padding:1.5rem; margin:1.2rem 0 }
-    .chips { display:flex; flex-wrap:wrap; gap:.45rem; padding:0; list-style:none }
-    .chips li { background:var(--bg); border:1px solid var(--border); border-radius:999px; padding:.35rem .8rem; font-size:.88rem }
-    footer.site { background:var(--maroon); color:var(--surface); padding:2.5rem 0 1rem }
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>About SSSE — Bal Vikas</title>
+<style>
+:root{--white:#fff;--blue:#B8E3F2;--blue-deep:#5BA4C9;--pink:#F7C6D0;--ink:#3A3A3A;--muted:#6A6A6A;--surface:#F7FBFD}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Georgia,serif;background:var(--white);color:var(--ink);line-height:1.6}
+h1,h2,h3{color:var(--blue-deep);line-height:1.2}
+a{color:var(--blue-deep)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+.banner{background:linear-gradient(90deg,var(--blue),var(--pink));text-align:center;padding:1rem}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--blue)}
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:.35rem;padding:.85rem 1rem}
+nav a{text-decoration:none;color:var(--ink);padding:.4rem .85rem;border-radius:999px;font:500 .92rem system-ui,sans-serif}
+nav a.on,nav a:hover{background:var(--pink);color:#4a2a33}
+.hero{display:grid;gap:2rem;align-items:center;padding:2.5rem 0}
+@media(min-width:900px){.hero{grid-template-columns:1.15fr .85fr}}
+.portrait{margin:0 auto;max-width:22rem;background:var(--surface);border:1px solid var(--blue);border-radius:1.4rem;overflow:hidden}
+.portrait img{display:block;width:100%;height:auto}
+.portrait figcaption{padding:.8rem 1rem;text-align:center;color:var(--muted);font-size:.9rem}
+.kicker{font:700 .72rem system-ui,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--pink-deep,#E8A0B0)}
+.lead{max-width:40rem;color:var(--muted);font-size:1.08rem}
+blockquote{border-left:3px solid var(--pink);margin:1.4rem 0 0;padding-left:1rem}
+blockquote p{font-style:italic;font-size:1.25rem;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;min-height:42px;padding:0 1.1rem;border-radius:999px;text-decoration:none;font:600 .9rem system-ui,sans-serif}
+.solid{background:var(--blue);color:#1a3a4a}
+.ghost{background:#fff;border:1px solid var(--pink)}
+.tri{display:grid;background:var(--blue)}
+@media(min-width:720px){.tri{grid-template-columns:repeat(3,1fr)}}
+.tri article{background:var(--surface);padding:1.6rem 1.3rem;margin:1px}
+section{padding:2.6rem 0}
+.grid5{display:grid;gap:.8rem}
+@media(min-width:900px){.grid5{grid-template-columns:repeat(5,1fr)}}
+.card{background:var(--surface);border:1px solid var(--blue);border-radius:1rem;padding:1rem;text-decoration:none}
+.value,.gcard{background:var(--surface);border:1px solid var(--pink);border-radius:1.1rem;padding:1.2rem;margin:1rem 0}
+.maroon{background:linear-gradient(180deg,var(--blue),#EAF6FB)}
+.groups{display:grid;gap:1rem}
+@media(min-width:720px){.groups{grid-template-columns:1fr 1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;padding:0;list-style:none}
+.chips li{background:#fff;border:1px solid var(--blue);border-radius:999px;padding:.3rem .75rem;font-size:.85rem}
+footer.site{background:linear-gradient(90deg,var(--blue),var(--pink));padding:2rem 0;text-align:center}
+</style>
 </head>
 <body>
-  <header><div class="wrap nav">
-    <a class="brand" href="about_ssse.html">SSSE · Bal Vikas</a>
-    <nav>
-      <a href="books.html">Books</a>
-      <a href="about_ssse.html">About SSSE</a>
-      <a href="ssse.html">SSSE</a>
-      <a href="calendar.html">Calendar</a>
-      <a href="#about">About</a>
-      <a href="#values">Five Values</a>
-      <a href="#methods">Methods</a>
-      <a href="#groups">Groups</a>
-      <a href="#parents">Parents & Gurus</a>
-    </nav>
-  </div></header>
-  <main>
-    <section class="hero wrap"><div class="hero-grid">
-      <div>
-        <p class="kicker">Sri Sathya Sai Spiritual Education</p>
-        <h1>Bal Vikas — <em>the blossoming of human excellence</em></h1>
-        <p class="lead">A free weekly programme for children, offered in Sai Centres worldwide. Outside India it is called Sai Spiritual Education (SSE / SSSE). At home it remains Bal Vikas — helping the five human values already present in every child to unfold.</p>
-        <blockquote><p>“The end of education is character.”</p><footer>Sri Sathya Sai Baba</footer></blockquote>
-        <div class="btns">
-          <a class="btn btn-solid" href="#values">The five human values</a>
-          <a class="btn btn-ghost" href="calendar.html">2026/27 calendar</a>
-        </div>
-      </div>
-      <figure class="portrait">
-        <img src="https://sdd9.github.io/SSSE/swami-child.png" alt="Sri Sathya Sai Baba blessing a kneeling child" width="232" height="300" />
-        <figcaption>Bhagawan Sri Sathya Sai Baba with a child — the heart of Bal Vikas</figcaption>
-      </figure>
-    </div></section>
-    <div class="tri">
-      <article><h2>Educare</h2><p>Not stuffing in facts — drawing out the divinity already within.</p></article>
-      <article><h2>Head, Heart, Hands</h2><p>Unity of thought, word, and deed. Knowing is not enough until the hands serve.</p></article>
-      <article><h2>Free, for every child</h2><p>Children of all creeds are welcome. Character first; book-learning second.</p></article>
-    </div>
-    <section id="about"><div class="wrap">
-      <p class="kicker">About the programme</p>
-      <h2>What SSSE is</h2>
-      <p class="lead">Sri Sathya Sai Spiritual Education is the name used outside India for Bal Vikas — “the blossoming of the child.” Bhagawan Sri Sathya Sai Baba began the programme so that children would not only become clever, but good.</p>
-      <p>In 1995 the name Sai Spiritual Education (SSE) was adopted internationally. In India the original name Bal Vikas remains.</p>
-      <p>Ordinary education pours information in. Educare draws the values out. A guru’s work is to create the climate in which they can blossom: prayer, example, story, song, silence, and service.</p>
-    </div></section>
-    <section id="guru-mission"><div class="wrap">
-      <p class="kicker">The guru's mission</p>
-      <h2>How to reveal the Sai in their hearts</h2>
-      <blockquote>
-        <p>“The children of the Sathya Sai Bala Vihars must know the Sathya Sai residing in their hearts. The teachers must also take it as the Puja of Sai Ram. How to reveal to these children the Sai, who is in their hearts—that is the problem you should set before yourselves. By leading the children towards Divinity, the teachers are serving their parents and society, for they will cleanse and brighten their homes and surroundings,” Baba said.</p>
-        <footer>Sri Sathya Sai Baba — defining the guru’s mission</footer>
-      </blockquote>
-    </div></section>
-    <section id="values"><div class="wrap">
-      <p class="kicker">Inherent, not imported</p>
-      <h2>Five human values</h2>
-      <div class="grid5">
-        <a class="card" href="#sathya"><h3>Sathya</h3><div class="en">Truth</div></a>
-        <a class="card" href="#dharma"><h3>Dharma</h3><div class="en">Right Conduct</div></a>
-        <a class="card" href="#shanti"><h3>Shanti</h3><div class="en">Peace</div></a>
-        <a class="card" href="#prema"><h3>Prema</h3><div class="en">Love</div></a>
-        <a class="card" href="#ahimsa"><h3>Ahimsa</h3><div class="en">Non-violence</div></a>
-      </div>
-      <article class="value" id="sathya"><h3>Sathya</h3><p>Truth is not only honesty of speech — it is the courage to see things as they are.</p></article>
-      <article class="value" id="dharma"><h3>Dharma</h3><p>The right action for this moment, this role, this relationship.</p></article>
-      <article class="value" id="shanti"><h3>Shanti</h3><p>Peace is not the absence of noise; it is a quiet mind.</p></article>
-      <article class="value" id="prema"><h3>Prema</h3><p>Selfless love, without bargain.</p></article>
-      <article class="value" id="ahimsa"><h3>Ahimsa</h3><p>Do no harm in thought, word, or deed. Help ever, hurt never.</p></article>
-    </div></section>
-    <section class="maroon" id="methods"><div class="wrap">
-      <p class="kicker">How a class feels</p>
-      <h2>Five teaching techniques</h2>
-      <div class="meth">
-        <article><h3>Silent sitting</h3><p>Still body and quiet breath.</p></article>
-        <article><h3>Prayer</h3><p>Prayers of many faiths.</p></article>
-        <article><h3>Group singing</h3><p>Bhajans and value songs.</p></article>
-        <article><h3>Storytelling</h3><p>Saints and ordinary heroes.</p></article>
-        <article><h3>Group activities</h3><p>Games, crafts, discussion, and seva.</p></article>
-      </div>
-    </div></section>
-    <section id="groups"><div class="wrap">
-      <p class="kicker">Ages 6–18</p>
-      <h2>Four groups</h2>
-      <div class="groups">
-        <article class="gcard"><header><h3>Group 1</h3><span class="ages">6–9 years</span></header><p>Wonder, habit, and heart.</p><ul class="chips"><li>Prayers</li><li>Nature</li><li>Sharing</li></ul></article>
-        <article class="gcard"><header><h3>Group 2</h3><span class="ages">9–12 years</span></header><p>Understanding and example.</p><ul class="chips"><li>Unity of religions</li><li>Self-discipline</li></ul></article>
-        <article class="gcard"><header><h3>Group 3</h3><span class="ages">12–15 years</span></header><p>Character under pressure.</p><ul class="chips"><li>Thought, word, deed</li><li>Seva</li></ul></article>
-        <article class="gcard"><header><h3>Group 4</h3><span class="ages">15–18 years</span></header><p>Leadership as service.</p><ul class="chips"><li>Mentoring</li><li>Educare</li></ul></article>
-      </div>
-    </div></section>
-    <section id="parents"><div class="wrap">
-      <p class="kicker">Home is the first classroom</p>
-      <h2>Parents & gurus</h2>
-      <p class="lead">SSSE works when parents and gurus walk the same path — simply, steadily, without show.</p>
-      <blockquote><p>“You must study to become steady… your education must result in you developing a strong and good character.”</p><footer>Sri Sathya Sai Baba</footer></blockquote>
-    </div></section>
-  </main>
-  <footer class="site"><div class="wrap">
-    <p>Sathya · Dharma · Shanti · Prema · Ahimsa</p>
-    <p>“The end of education is character.” — Sri Sathya Sai Baba</p>
-  </div></footer>
-</body>
-</html>
+<div class="banner">Sri Sathya Sai Spiritual Education · Bal Vikas</div>
+<header><nav>
+<a href="index.html">Home</a>
+<a href="books.html">Books</a>
+<a class="on" href="about_ssse.html">About SSSE</a>
+<a href="ssse.html">SSSE</a>
+<a href="calendar.html">Calendar</a>
+</nav></header>
+<main>
+<section class="wrap hero">
+<div>
+<p class="kicker">Sri Sathya Sai Spiritual Education</p>
+<h1>Bal Vikas — the blossoming of human excellence</h1>
+<p class="lead">A free weekly programme for children. Outside India it is called Sai Spiritual Education (SSE / SSSE). At home it remains Bal Vikas.</p>
+<blockquote><p>“The end of education is character.”</p><footer>Sri Sathya Sai Baba</footer></blockquote>
+<div class="btns"><a class="btn solid" href="#values">The five human values</a><a class="btn ghost" href="calendar.html">2026/27 calendar</a></div>
+</div>
+<figure class="portrait">
+<img src="https://sdd9.github.io/SSSE/swami-child.png" alt="Sri Sathya Sai Baba blessing a kneeling child"/>
+<figcaption>Bhagawan Sri Sathya Sai Baba with a child</figcaption>
+</figure>
+</section>
+<div class="tri">
+<article><h2>Educare</h2><p>Not stuffing in facts — drawing out the divinity already within.</p></article>
+<article><h2>Head, Heart, Hands</h2><p>Unity of thought, word, and deed.</p></article>
+<article><h2>Free, for every child</h2><p>Character first; book-learning second.</p></article>
+</div>
+<section id="about" class="wrap">
+<p class="kicker">About the programme</p>
+<h2>What SSSE is</h2>
+<p class="lead">Sri Sathya Sai Spiritual Education is Bal Vikas — the blossoming of the child. Baba began the programme so children would become good, not only clever.</p>
+<p>Ordinary education pours information in. Educare draws the values out through prayer, example, story, song, silence, and service.</p>
+</section>
+<section id="guru-mission" class="wrap">
+<p class="kicker">The guru's mission</p>
+<h2>How to reveal the Sai in their hearts</h2>
+<blockquote><p>“The children of the Sathya Sai Bala Vihars must know the Sathya Sai residing in their hearts. The teachers must also take it as the Puja of Sai Ram. How to reveal to these children the Sai, who is in their hearts—that is the problem you should set before yourselves. By leading the children towards Divinity, the teachers are serving their parents and society, for they will cleanse and brighten their homes and surroundings,” Baba said.</p><footer>Sri Sathya Sai Baba</footer></blockquote>
+</section>
+<section id="values" class="wrap">
+<p class="kicker">Inherent, not imported</p>
+<h2>Five human values</h2>
+<div class="grid5">
+<a class="card" href="#sathya"><h3>Sathya</h3><p>Truth</p></a>
+<a class="card" href="#dharma"><h3>Dharma</h3><p>Right Conduct</p></a>
+<a class="card" href="#shanti"><h3>Shanti</h3><p>Peace</p></a>
+<a class="card" href="#prema"><h3>Prema</h3><p>Love</p></a>
+<a class="card" href="#ahimsa"><h3>Ahimsa</h3><p>Non-violence</p></a>
+</div>
+<article class="value" id="sathya"><h3>Sathya</h3><p>Speak, think, and live what is true.</p></article>
+<article class="value" id="dharma"><h3>Dharma</h3><p>Do what is right, not merely what is easy.</p></article>
+<article class="value" id="shanti"><h3>Shanti</h3><p>A quiet mind. Pause before anger.</p></article>
+<article class="value" id="prema"><h3>Prema</h3><p>Kindness without bargain.</p></article>
+<article class="value" id="ahimsa"><h3>Ahimsa</h3><p>Help ever, hurt never.</p></article>
+</section>
+<section id="methods" class="maroon"><div class="wrap">
+<p class="kicker">How a class feels</p>
+<h2>Five teaching techniques</h2>
+<div class="groups">
+<article class="gcard"><h3>Silent sitting</h3><p>Still body and quiet breath.</p></article>
+<article class="gcard"><h3>Prayer</h3><p>Prayers of many faiths.</p></article>
+<article class="gcard"><h3>Group singing</h3><p>Bhajans and value songs.</p></article>
+<article class="gcard"><h3>Storytelling</h3><p>Saints and ordinary heroes.</p></article>
+<article class="gcard"><h3>Group activities</h3><p>Games, crafts, discussion, and seva.</p></article>
+</div>
+</div></section>
+<section id="groups" class="wrap">
+<p class="kicker">Ages 6–18</p>
+<h2>Four groups</h2>
+<div class="groups">
+<article class="gcard"><h3>Group 1 · 6–9</h3><p>Wonder, habit, and heart.</p><ul class="chips"><li>Prayers</li><li>Nature</li><li>Sharing</li></ul></article>
+<article class="gcard"><h3>Group 2 · 9–12</h3><p>Understanding and example.</p><ul class="chips"><li>Unity of religions</li><li>Self-discipline</li></ul></article>
+<article class="gcard"><h3>Group 3 · 12–15</h3><p>Character under pressure.</p><ul class="chips"><li>Thought, word, deed</li><li>Seva</li></ul></article>
+<article class="gcard"><h3>Group 4 · 15–18</h3><p>Leadership as service.</p><ul class="chips"><li>Mentoring</li><li>Educare</li></ul></article>
+</div>
+</section>
+<section id="parents" class="wrap">
+<p class="kicker">Home is the first classroom</p>
+<h2>Parents &amp; gurus</h2>
+<p class="lead">SSSE works when parents and gurus walk the same path — simply, steadily, without show.</p>
+</section>
+</main>
+<footer class="site"><div class="wrap">Sathya · Dharma · Shanti · Prema · Ahimsa</div></footer>
+</body></html>
