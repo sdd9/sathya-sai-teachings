@@ -1,66 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSSE / Bal Vikas</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap">
-    <style>
-        body { font-family: Georgia, serif; }
-        .nav-font { font-family: Inter, system-ui, sans-serif; }
-        .book-title, .section-title { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
-        .quote-banner { background: linear-gradient(to right, #C2410F, #9F3410); }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SSSE / Bal Vikas</title>
+<style>
+:root{--white:#fff;--blue:#B8E3F2;--blue-deep:#5BA4C9;--pink:#F7C6D0;--ink:#3A3A3A;--muted:#6A6A6A}
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,serif;background:var(--white);color:var(--ink)}
+.banner{background:linear-gradient(90deg,var(--blue),var(--pink));text-align:center;padding:1rem}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--blue)}
+nav{max-width:1100px;margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem;padding:.9rem 1rem}
+nav a{text-decoration:none;color:var(--ink);padding:.4rem .9rem;border-radius:999px;font:500 .95rem system-ui,sans-serif}
+nav a.on,nav a:hover{background:var(--blue);color:#1a3a4a}
+main{max-width:1100px;margin:0 auto;padding:2.2rem 1.25rem 4rem}
+h1,h2{color:var(--blue-deep)}
+a{color:var(--blue-deep)}
+table{width:100%;border-collapse:collapse;font:500 .9rem system-ui,sans-serif}
+thead{background:linear-gradient(90deg,var(--blue),var(--pink))}
+th{text-align:left;padding:.7rem .8rem}
+td{padding:.8rem;border-bottom:1px solid var(--blue);vertical-align:top}
+.note{font-size:.78rem;color:var(--muted)}
+section{margin-top:2.2rem}
+</style>
 </head>
-<body class="bg-white text-[#1E2937]">
-    <div class="quote-banner text-white py-4 text-center">
-        <p class="text-xl font-semibold">“The end of education is character.”</p>
-        <p class="text-sm text-white/80 mt-1">— Sri Sathya Sai Baba</p>
-    </div>
-    <nav class="sticky top-0 z-40 bg-white/95 border-b border-gray-200">
-        <div class="max-w-screen-2xl mx-auto px-6 flex items-center justify-end py-5">
-            <div class="flex items-center gap-x-8 text-sm nav-font">
-                <a href="books.html">Books</a>
-                <a href="about_ssse.html">About SSSE</a>
-                <a href="ssse.html" class="text-[#C2410F] font-semibold">SSSE</a>
-                <a href="calendar.html">Calendar</a>
-            </div>
-        </div>
-    </nav>
-    <main class="max-w-screen-2xl mx-auto px-6 pt-10 pb-20">
-        <h1 class="book-title text-5xl text-[#C2410F] mb-6">SSSE — Bal Vikas</h1>
-        <p class="max-w-3xl text-lg mb-10">Weekly classes in the five human values. See <a class="underline text-[#C2410F]" href="about_ssse.html">About SSSE</a> for the programme and the guru’s mission.</p>
-        <section id="group1">
-            <h2 class="section-title text-4xl text-[#C2410F] mb-4">Group 1</h2>
-            <div class="overflow-x-auto rounded-2xl border border-[#C2410F]/15">
-                <table class="min-w-full text-left text-sm nav-font">
-                    <thead class="bg-[#C2410F] text-white">
-                        <tr>
-                            <th class="px-4 py-3">Session Date</th>
-                            <th class="px-4 py-3">Session Title</th>
-                            <th class="px-4 py-3">Session Number</th>
-                            <th class="px-4 py-3">Lesson Plan Link</th>
-                            <th class="px-4 py-3">Comment</th>
-                            <th class="px-4 py-3">Bhajan of the Month</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="align-top">
-                            <td class="px-4 py-4">20 Sept 2026</td>
-                            <td class="px-4 py-4 font-medium">Introduction to the 5 Human Values</td>
-                            <td class="px-4 py-4">Session 2</td>
-                            <td class="px-4 py-4"><a class="text-[#C2410F] underline" href="https://docs.google.com/document/d/1cID9odf9HTdvH69l_9o9ARe4IXSUt1IjJOO4ZiSZ4s8/edit?usp=sharing" target="_blank">Lesson plan</a><div class="text-xs text-[#C2410F]/70 mt-1">Parent to request for access</div></td>
-                            <td class="px-4 py-4">Prayers: <a class="text-[#C2410F] underline" href="https://docs.google.com/document/d/1U-y8qHHVyvt9uu6NMZkoz04aKP14gFkErQoYqfrjmv8/edit?usp=sharing" target="_blank">Prayers link</a><div class="text-xs text-[#C2410F]/70 mt-1">Parent to request for access</div><div class="mt-2">Super Brain Yoga: <a class="text-[#C2410F] underline" href="https://www.youtube.com/watch?v=KSwhpF9iJSs&pp=ygUQc3VwZXIgYnJhaW4geW9nYQ%3D%3D" target="_blank">Watch video</a></div></td>
-                            <td class="px-4 py-4"><a class="text-[#C2410F] underline" href="https://sairhythms.sathyasai.org/song/remind-me-my-lord" target="_blank">Remind Me My Lord</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-        <section id="group2" class="mt-12"><h2 class="section-title text-4xl text-[#C2410F] mb-3">Group 2</h2><p>Sessions will be listed here as they are offered.</p></section>
-        <section id="group3" class="mt-12"><h2 class="section-title text-4xl text-[#C2410F] mb-3">Group 3</h2><p>Sessions will be listed here as they are offered.</p></section>
-        <section id="group4" class="mt-12"><h2 class="section-title text-4xl text-[#C2410F] mb-3">Group 4</h2><p>Sessions will be listed here as they are offered.</p></section>
-    </main>
-</body>
-</html>
+<body>
+<div class="banner"><p>“The end of education is character.” — Sri Sathya Sai Baba</p></div>
+<header><nav>
+<a href="index.html">Home</a>
+<a href="books.html">Books</a>
+<a href="about_ssse.html">About SSSE</a>
+<a class="on" href="ssse.html">SSSE</a>
+<a href="calendar.html">Calendar</a>
+</nav></header>
+<main>
+<h1>SSSE — Bal Vikas</h1>
+<p>Weekly classes in the five human values. See <a href="about_ssse.html">About SSSE</a> for the programme and the guru’s mission.</p>
+<section id="group1">
+<h2>Group 1</h2>
+<div style="overflow-x:auto;border:1px solid var(--blue);border-radius:1rem">
+<table>
+<thead><tr><th>Session Date</th><th>Session Title</th><th>Session Number</th><th>Lesson Plan Link</th><th>Comment</th><th>Bhajan of the Month</th></tr></thead>
+<tbody>
+<tr>
+<td>20 Sept 2026</td>
+<td>Introduction to the 5 Human Values</td>
+<td>Session 2</td>
+<td><a href="https://docs.google.com/document/d/1cID9odf9HTdvH69l_9o9ARe4IXSUt1IjJOO4ZiSZ4s8/edit?usp=sharing" target="_blank">Lesson plan</a><div class="note">Parent to request for access</div></td>
+<td>Prayers: <a href="https://docs.google.com/document/d/1U-y8qHHVyvt9uu6NMZkoz04aKP14gFkErQoYqfrjmv8/edit?usp=sharing" target="_blank">Prayers link</a><div class="note">Parent to request for access</div><div>Super Brain Yoga: <a href="https://www.youtube.com/watch?v=KSwhpF9iJSs&amp;pp=ygUQc3VwZXIgYnJhaW4geW9nYQ%3D%3D" target="_blank">Watch video</a></div></td>
+<td><a href="https://sairhythms.sathyasai.org/song/remind-me-my-lord" target="_blank">Remind Me My Lord</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="group2"><h2>Group 2</h2><p>Sessions will be listed here as they are offered.</p></section>
+<section id="group3"><h2>Group 3</h2><p>Sessions will be listed here as they are offered.</p></section>
+<section id="group4"><h2>Group 4</h2><p>Sessions will be listed here as they are offered.</p></section>
+</main>
+</body></html>

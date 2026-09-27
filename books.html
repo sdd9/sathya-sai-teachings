@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap">
-    <style>
-        body { font-family: Georgia, serif; }
-        .nav-font { font-family: Inter, system-ui, sans-serif; }
-        .book-title { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
-        .quote-banner { background: linear-gradient(to right, #C2410F, #9F3410); }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Books</title>
+<style>
+:root{--white:#fff;--blue:#B8E3F2;--blue-deep:#5BA4C9;--pink:#F7C6D0;--ink:#3A3A3A;--muted:#6A6A6A}
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,serif;background:var(--white);color:var(--ink)}
+.banner{background:linear-gradient(90deg,var(--blue),var(--pink));text-align:center;padding:1rem}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--blue)}
+nav{max-width:1100px;margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem;padding:.9rem 1rem}
+nav a{text-decoration:none;color:var(--ink);padding:.4rem .9rem;border-radius:999px;font:500 .95rem system-ui,sans-serif}
+nav a.on,nav a:hover{background:var(--pink);color:#4a2a33}
+main{max-width:640px;margin:0 auto;padding:3rem 1.25rem}
+h1{color:var(--blue-deep)}
+ul{list-style:none;padding:0}
+li{background:#F7FBFD;border:1px solid var(--blue);border-radius:1rem;padding:1.1rem 1.2rem;margin:1rem 0}
+li a{color:var(--blue-deep);font-size:1.15rem}
+.meta{color:var(--muted);font-size:.9rem;margin-top:.35rem}
+</style>
 </head>
-<body class="bg-white text-[#1E2937]">
-    <div class="quote-banner text-white py-4 text-center">
-        <p class="text-xl md:text-2xl font-semibold">“HEAR, ACT & PRACTICE. Practice what is heard. Then only it becomes a real study circle.”</p>
-        <p class="text-sm text-white/80 mt-1">— Sri Sathya Sai Baba</p>
-    </div>
-    <nav class="sticky top-0 z-40 bg-white/95 border-b border-gray-200">
-        <div class="max-w-screen-2xl mx-auto px-6 flex items-center justify-end py-5 nav-font text-sm">
-            <div class="flex gap-x-8">
-                <a href="books.html" class="text-[#C2410F] font-semibold">Books</a>
-                <a href="about_ssse.html">About SSSE</a>
-                <a href="ssse.html">SSSE</a>
-                <a href="calendar.html">Calendar</a>
-            </div>
-        </div>
-    </nav>
-    <main class="max-w-2xl mx-auto px-6 py-16">
-        <h1 class="book-title text-4xl text-[#C2410F] mb-8">Books</h1>
-        <ul class="space-y-8 text-lg">
-            <li>
-                <a class="text-[#C2410F] underline underline-offset-4" href="https://drive.google.com/file/d/1zUC66HB50TSSj7BtOYbWKAE1uMEdTeaJ/view?usp=drive_link" target="_blank" rel="noopener">Sathya Sai Parenting — Part 1</a>
-                <div class="text-sm text-[#C2410F]/70 mt-1">Rita Bruce · PDF</div>
-            </li>
-            <li>
-                <a class="text-[#C2410F] underline underline-offset-4" href="https://drive.google.com/file/d/1_pBevVZirXW1Vr6y-MCxfxy0tmxVU0Rx/view?usp=drive_link" target="_blank" rel="noopener">Sathya Sai Parenting — Part 2</a>
-                <div class="text-sm text-[#C2410F]/70 mt-1">Rita Bruce · PDF</div>
-            </li>
-        </ul>
-    </main>
-</body>
-</html>
+<body>
+<div class="banner"><p>“HEAR, ACT &amp; PRACTICE.” — Sri Sathya Sai Baba</p></div>
+<header><nav>
+<a href="index.html">Home</a>
+<a class="on" href="books.html">Books</a>
+<a href="about_ssse.html">About SSSE</a>
+<a href="ssse.html">SSSE</a>
+<a href="calendar.html">Calendar</a>
+</nav></header>
+<main>
+<h1>Books</h1>
+<ul>
+<li><a href="https://drive.google.com/file/d/1zUC66HB50TSSj7BtOYbWKAE1uMEdTeaJ/view?usp=drive_link" target="_blank" rel="noopener">Sathya Sai Parenting — Part 1</a><div class="meta">Rita Bruce · PDF</div></li>
+<li><a href="https://drive.google.com/file/d/1_pBevVZirXW1Vr6y-MCxfxy0tmxVU0Rx/view?usp=drive_link" target="_blank" rel="noopener">Sathya Sai Parenting — Part 2</a><div class="meta">Rita Bruce · PDF</div></li>
+</ul>
+</main>
+</body></html>
