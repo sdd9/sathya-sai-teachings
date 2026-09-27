@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SSSE Calendar • About SSSE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root { --bg:#f6efe3; --surface:#fffbf4; --fg:#2a1a12; --muted:#6d5243; --primary:#c45c12; --maroon:#7a2e1a; --gold:#c9a227; --border:#e4d4bc; }
+* { box-sizing:border-box }
+body { margin:0; font-family:Figtree,system-ui,sans-serif; background:var(--bg); color:var(--fg); line-height:1.55 }
+h1,h2 { font-family:"Cormorant Garamond",Georgia,serif; color:var(--maroon) }
+a { color:inherit }
+.wrap { max-width:840px; margin:0 auto; padding:0 1.25rem }
+header { position:sticky; top:0; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--border) }
+.nav { display:flex; justify-content:space-between; align-items:center; padding:.85rem 0; gap:1rem }
+.brand { text-decoration:none; color:var(--maroon); font-family:"Cormorant Garamond",serif; font-size:1.35rem }
+nav a { text-decoration:none; font-size:.9rem; font-weight:500; padding:.45rem .8rem; border-radius:999px; color:var(--muted) }
+nav a.on { background:var(--maroon); color:var(--surface) }
+.hero { padding:2.8rem 0 1.5rem }
+.kicker { font-size:.72rem; font-weight:700; letter-spacing:.28em; text-transform:uppercase; color:var(--primary) }
+h1 { font-size:clamp(2.2rem,5vw,3.4rem); margin:.4rem 0 }
+.lead { color:var(--muted); max-width:38rem }
+.btns { display:flex; flex-wrap:wrap; gap:.6rem; margin:1.4rem 0 }
+.btn { display:inline-flex; align-items:center; min-height:44px; padding:0 1.1rem; border-radius:999px; text-decoration:none; font-weight:600; font-size:.9rem }
+.solid { background:var(--maroon); color:var(--surface) }
+.ghost { background:var(--surface); border:1px solid var(--border) }
+.feed { font-size:.85rem; color:var(--muted); word-break:break-all }
+section { margin:2rem 0 }
+h2 { font-size:1.8rem; margin:0 0 .6rem }
+.note { color:var(--primary); font-style:italic; font-size:.92rem }
+ul { list-style:none; padding:0; margin:0; display:grid; gap:.5rem }
+li { display:flex; justify-content:space-between; gap:1rem; align-items:center; background:var(--surface); border:1px solid var(--border); border-radius:1rem; padding:.85rem 1rem; flex-wrap:wrap }
+.when { display:block; color:var(--muted); font-size:.9rem }
+.kind { font-size:.72rem; font-weight:700; background:var(--bg); border-radius:999px; padding:.25rem .7rem; color:var(--maroon) }
+footer { background:var(--maroon); color:var(--surface); padding:1.6rem 0; margin-top:2.5rem; font-size:.85rem }
+@media (max-width:720px) { nav { display:none } }
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="about_ssse.html">About SSSE</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about_ssse.html">About SSSE</a>
+    <a href="ssse.html">Sessions</a>
+    <a class="on" href="calendar.html">Calendar</a>
+  </nav>
+</div></header>
+<main class="wrap">
+  <div class="hero">
+    <p class="kicker">2026 / 27</p>
+    <h1>Family calendar</h1>
+    <p class="lead">Sunday classes, bhajans, and special days. Times are Pacific (Vancouver).</p>
+    <div class="btns">
+      <a class="btn solid" href="https://calendar.google.com/calendar/r?cid=https%3A%2F%2Fsrisathyasai.ca%2Fssse-2026-27.ics">Add to Google Calendar</a>
+      <a class="btn ghost" href="webcal://srisathyasai.ca/ssse-2026-27.ics">Apple / Outlook</a>
+      <a class="btn ghost" href="ssse-2026-27.ics" download>Download .ics</a>
+    </div>
+    <p class="feed">Feed: https://srisathyasai.ca/ssse-2026-27.ics</p>
+  </div>
+</main>
+<p class="wrap">Full month-by-month list is on this page after publish. See also the original listing at <a href="https://sdd9.github.io/SSSE/calendar.html">sdd9.github.io/SSSE/calendar.html</a>.</p>
+</body></html>
